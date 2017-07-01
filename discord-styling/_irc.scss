@@ -17,7 +17,7 @@ body { font-family: $irc-font; }
 .chat .divider { background-color: inherit; height: auto; }
 
 /* Hide embeds. */
-.embed-wrapper { display: none; }
+// .embed-wrapper { display: none; }
 
 /* Wrap <usernames>. */
 .user-name::before { content: "<"; color: $nickdelim-color; }
