@@ -1,0 +1,13 @@
+/* The (current) only function of this file is making all code blocks
+   use the Fira Code font
+ */
+
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url(https://cdn.rawgit.com/tonsky/FiraCode/master/distr/ttf/FiraCode-Regular.ttf);
+}
+
+code {
+  font-family: 'Fira Code' !important;
+}

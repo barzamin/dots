@@ -1,0 +1,38 @@
+/* Thanks to Lynn/@chordbug@twitter.com for the original;
+   parameterized/tweaked for desktop discord by Erin/@barzamin@github.com.
+ */
+
+$nickdelim-color: white;
+$irc-font: monospace;
+
+body { font-family: $irc-font; }
+
+/* Crunch messages together. */
+.message-group .comment .markup { white-space: pre-line; line-height: 1.2em; }
+.message-group { border-bottom: none; }
+.message-group.compact.message-group { padding: 0; }
+.message-group.compact .message { margin: 2px 0; }
+
+/* ...but give the date dividers space. */
+.chat .divider { background-color: inherit; height: auto; }
+
+/* Hide embeds. */
+.embed-wrapper { display: none; }
+
+/* Wrap <usernames>. */
+.user-name::before { content: "<"; color: $nickdelim-color; }
+.user-name::after { content: ">"; color: $nickdelim-color; }
+span.bot-tag + .user-name::before { content: "<&"; }
+span.bot-tag { display: none; }
+
+/* Space after usernames. */
+.message-group.compact .message .message-text .markup .user-name { margin-right: 8px; }
+
+/* Simplify chat form. */
+.theme-dark .chat form { border-top: none; }
+.chat form { box-shadow: none; }
+.channel-textarea-inner { border: none; }
+.channel-textarea-inner textarea { font-family: $irc-font; }
+
+// /* Hide the "N online" counter */
+.friends-online, .btn-friends+header { display: none; }
