@@ -5,7 +5,7 @@
 $nickdelim-color: white;
 $irc-font: monospace;
 
-body { font-family: $irc-font; }
+body, input, textarea, span { font-family: $irc-font; }
 
 /* Crunch messages together. */
 .message-group .comment .markup { white-space: pre-line; line-height: 1.2em; }
@@ -29,10 +29,9 @@ span.bot-tag { display: none; }
 .message-group.compact .message .message-text .markup .user-name { margin-right: 8px; }
 
 /* Simplify chat form. */
-.theme-dark .chat form { border-top: none; }
-.chat form { box-shadow: none; }
-.channel-textarea-inner { border: none; }
-.channel-textarea-inner textarea { font-family: $irc-font; }
+.theme-dark .chat form { border-top: none; box-shadow: none !important; }
+.chat form textarea { font-family: $irc-font; }
+textarea { padding-top: 13px !important; }
 
 // /* Hide the "N online" counter */
 .friends-online, .btn-friends+header { display: none; }
